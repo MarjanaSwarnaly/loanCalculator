@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/12.1.0/nouislider.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+
+  <title>Loan calculator</title>
+</head>
+
+<body>
+
+  <div class="loan-body container p-5 vh-100">
+    <h2 class="text-center ">Loan Calculator</h2>
+
+    <div class="loan-form text-center" id="loan-form">
+      <div class="row g-3 d-flex justify-content-evenly">
+        <div class="col-sm-3 ">
+          <div class="label">Amount</div>
+          <div class="loan-amount">
+            <div class="input-group">
+              <span class="input-group-text" id="basic-addon1">$</span>
+              <input type="text" id="txtLoan" aria-describedby="basic-addon1" class="form-control" value="10000">
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3 ">
+          <div class="label">Interest Rate</div>
+          <div class="loan-amount ">
+            <div class="input-group">
+              <span class="input-group-text" id="basic-addon2">%</span>
+
+              <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon2"
+                id="txtInterest" value="8.99 " maxlength="5">
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 ">
+          <div class="label">Payment Frequency</div>
+          <div class="payment-frequency ">
+            <div class="btn-group">
+              <a href="#" class="btn active" aria-current="page" data-value="1">Monthly</a>
+              <a href="#" data-value="2" class="btn">Fortnightly</a>
+              <a href="#" data-value="3" class="btn">Weekly</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-8">
+          <div class="label">Loan Term(Years) </div>
+          <div class="lone-term-ui">
+            <div class="loan-term">
+              <div id="yearRange">
+              </div>
+              <div class="loan-calc__slider-value" id="slider-range-value">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-4 ">
+        <button type="submit" class="btn btn-dark" data-bs-toggle="collapse" data-bs-target="#collapseExample"
+          aria-expanded="false" aria-controls="collapseExample">Calculate</button>
+      </div>
+      <div class="collapse" id="collapseExample">
+        <div class="card card-body mt-4" id=" graph-pane">
+          <div class="row ">
+            <div class="col-6 ">
+              <div class="form-group">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">Estimated Payment</span>
+                  </div>
+                  <div id="repayment-cycle">
+                    <div id="repayment-cycle-value" class="loan-value p-2">
+                      $<span id="repayment-value">0</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div id="repayment-total">
+                <div class="form-group mb-3 text-center">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text mx-3">Total Interset Would Be</span>
+                    </div>
+                    <div id="repayment-total-value" class="loan-value mt-2">
+                      $<span id="interest-total">0</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/12.1.0/nouislider.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wnumb/1.2.0/wNumb.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="assets/main.js"></script>
+
+</html>
